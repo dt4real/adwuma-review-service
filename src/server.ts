@@ -12,6 +12,7 @@ import { verify } from 'jsonwebtoken';
 import compression from 'compression';
 import { checkConnection } from '@review/elasticsearch';
 import { appRoutes } from '@review/routes';
+import { createConnection } from '@review/queues/connection';
 import { Channel } from 'amqplib';
 
 const SERVER_PORT = 4007;
@@ -60,7 +61,7 @@ const routesMiddleware = (app: Application): void => {
 };
 
 const startQueues = async (): Promise<void> => {
-  console.log('test');
+  reviewChannel = await createConnection() as Channel;
 };
 
 const startElasticSearch = (): void => {
