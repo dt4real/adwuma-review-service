@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@dt4real/adwuma-common": "^0.0.3",
+    "@dt4real/adwuma-common": "^0.0.5",
     "@elastic/elasticsearch": "^8.10.0",
     "amqplib": "^0.10.3",
     "compression": "^1.7.4",
